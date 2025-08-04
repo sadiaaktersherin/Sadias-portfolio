@@ -1,21 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
+import portfolioImg from "../assets/portfolio.jpg";
+import ecommerceImg from "../assets/E-commerce.jpg";
+import blogImg from "../assets/Blog.jpg";
+
 
 const projects = [
   {
     title: "Portfolio Website",
     description: "A sleek, animated portfolio using React & Tailwind.",
-    img: "https://via.placeholder.com/400x250"
+    img: portfolioImg,
   },
   {
     title: "E-commerce App",
     description: "A fully functional e-commerce platform with cart & checkout.",
-    img: "https://via.placeholder.com/400x250"
+    img: ecommerceImg
   },
   {
     title: "Blog Platform",
     description: "A modern blog site with Markdown support.",
-    img: "https://via.placeholder.com/400x250"
+    img: blogImg
   }
 ];
 
