@@ -3,6 +3,22 @@ import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 
+// Animation Variants
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0 },
+};
+
 const skills = [
   {
     name: "React",
@@ -44,22 +60,26 @@ export default function SkillsSection() {
     >
       <h2 className="text-3xl font-bold mb-8">My Skills</h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className={`p-6 rounded-xl ${skill.color} shadow-md hover:shadow-lg hover:scale-105 transition-transform`}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
+            className={`p-6 rounded-xl ${skill.color} shadow-md hover:shadow-xl hover:scale-[1.05] transition-all duration-300`}
+            variants={cardVariants}
+            whileHover={{ rotate: [0, 1.5, -1.5, 0] }}
           >
             {skill.icon}
             <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
             <p className="text-gray-700">{skill.description}</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

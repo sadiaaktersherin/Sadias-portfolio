@@ -41,12 +41,13 @@ export default function Header() {
         <Link to="/#projects" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>
           Projects
         </Link>
-        <Link to="/#blog" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>
-          Blog
-        </Link>
         <Link to="/#services" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>
           Services
         </Link>
+        <Link to="/#blog" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>
+          Blog
+        </Link>
+        
         <Link to="/#contact" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>
           Contact
         </Link>
@@ -103,14 +104,15 @@ export default function Header() {
                 Projects
               </Link>
             </li>
-            <li>
-              <Link to="/#blog" onClick={() => setMenuOpen(false)}>
-                Blog
-              </Link>
-            </li>
+            
             <li>
               <Link to="/#services" onClick={() => setMenuOpen(false)}>
                 Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/#blog" onClick={() => setMenuOpen(false)}>
+                Blog
               </Link>
             </li>
             <li>

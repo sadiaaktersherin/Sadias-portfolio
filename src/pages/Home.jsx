@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowDown, FolderOpen, Send } from 'lucide-react';
+
 import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import profileImg from "../assets/profile.jpg";
@@ -34,13 +36,52 @@ function Home() {
         </motion.h1>
 
         <motion.p
-          className="text-lg max-w-xl"
+          className="text-lg max-w-xl mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
           A passionate web developer crafting clean, beautiful, and user-friendly experiences.
         </motion.p>
+
+        {/* 🚀 CTA Buttons */}
+        <motion.div
+          className="flex gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <a
+            href="#projects"
+            className="bg-purple-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-purple-700 transition inline-flex items-center gap-2"
+          >
+            <FolderOpen className="w-5 h-5" />
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            className="border border-purple-600 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-100 transition inline-flex items-center gap-2"
+          >
+            <Send className="w-5 h-5" />
+            Hire Me
+          </a>
+        </motion.div>
+
+        {/* ⬇️ Scroll Down Arrow */}
+        <motion.a
+          href="#about"
+          className="text-purple-600 hover:text-purple-800"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: [0, -5, 0] }}
+          transition={{
+            delay: 1,
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <ArrowDown className="w-6 h-6 animate-bounce" />
+        </motion.a>
       </section>
 
       {/* 📝 About Me Section */}
@@ -64,7 +105,6 @@ function Home() {
       <section id="projects" className="px-6 py-16">
         <ProjectsSection />
       </section>
-
     </main>
   );
 }
