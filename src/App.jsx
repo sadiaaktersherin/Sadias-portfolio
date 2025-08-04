@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Projects from './pages/Projects';
+
 import Blog from './pages/Blog';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -24,7 +24,7 @@ function App() {
       <main className="relative z-10">
         <section id="home"><Home /></section>
         <section id="about"><About /></section>
-        <section id="projects"><Projects /></section>
+        
         <section id="services"><Services /></section>
         <section id="blog"><Blog /></section>
         <section id="contact"><Contact /></section>

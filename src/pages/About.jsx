@@ -4,14 +4,6 @@ import React from 'react';
 function About() {
   return (
     <div className="p-10 max-w-4xl mx-auto space-y-16">
-      {/* About Me */}
-      <section data-aos="fade-up" className="text-center">
-        <h1 className="text-4xl font-bold mb-4">About Me</h1>
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          I'm a web developer with a passion for building clean, functional websites.
-        </p>
-      </section>
-
       {/* Experience */}
       <section data-aos="fade-right">
         <h2 className="text-3xl font-semibold mb-3">Experience</h2>

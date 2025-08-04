@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 
+
+
 function Home() {
   return (
     <main className="relative z-10 bg-gradient-to-b from-pink-100 via-purple-100 to-blue-100 text-gray-800">
@@ -46,13 +48,8 @@ function Home() {
         <ProjectsSection />
       </section>
 
-      {/* 📞 Contact or Future Sections */}
-      <section id="contact" className="px-6 py-16 text-center bg-white/60 backdrop-blur-md shadow-inner mx-6 rounded-2xl mb-10" data-aos="fade-up">
-        <h2 className="text-3xl font-bold mb-4">More Coming Soon...</h2>
-        <p className="max-w-xl mx-auto text-gray-600">
-          Stay tuned for more sections like Testimonials, Blog, and a dynamic Contact page to make this portfolio fully interactive.
-        </p>
-      </section>
+      
+
 
     </main>
   );
