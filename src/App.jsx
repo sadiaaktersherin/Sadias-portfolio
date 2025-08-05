@@ -24,37 +24,39 @@ function App() {
   return (
     <>
       <Background3D />
-      <Header />
-      <ScrollToHash />
-      <main className="relative z-10">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <section id="home">
-                  <Home />
-                </section>
-                <section id="about">
-                  <About />
-                </section>
-                <section id="services">
-                  <Services />
-                </section>
-                <section id="blog">
-                  <Blog />
-                </section>
-                <section id="contact">
-                  <Contact />
-                </section>
-              </>
-            }
-          />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </main>
-      <Footer />
+      <div className="overflow-x-hidden">
+        <Header />
+        <ScrollToHash />
+        <main className="relative z-10">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <section id="home" className="max-w-full w-full overflow-x-hidden">
+                    <Home />
+                  </section>
+                  <section id="about" className="max-w-full w-full overflow-x-hidden">
+                    <About />
+                  </section>
+                  <section id="services" className="max-w-full w-full overflow-x-hidden">
+                    <Services />
+                  </section>
+                  <section id="blog" className="max-w-full w-full overflow-x-hidden">
+                    <Blog />
+                  </section>
+                  <section id="contact" className="max-w-full w-full overflow-x-hidden">
+                    <Contact />
+                  </section>
+                </>
+              }
+            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
